@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042C68A31FB9D3960031C93F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042C68A21FB9D3960031C93F /* DetailViewController.swift */; };
+		046F085F1FB8FA4300FD64E9 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F085D1FB8FA4300FD64E9 /* PokeCell.swift */; };
+		046F08601FB8FA4300FD64E9 /* PokeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046F085E1FB8FA4300FD64E9 /* PokeCell.xib */; };
+		046F08641FB8FD9A00FD64E9 /* PokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046F08631FB8FD9A00FD64E9 /* PokeViewController.swift */; };
 		0488DED51FB8CBC500EBBAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DED41FB8CBC500EBBAB5 /* AppDelegate.swift */; };
 		0488DEDA1FB8CBC500EBBAB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0488DED81FB8CBC500EBBAB5 /* Main.storyboard */; };
 		0488DEDC1FB8CBC500EBBAB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0488DEDB1FB8CBC500EBBAB5 /* Assets.xcassets */; };
@@ -20,10 +24,17 @@
 		0488DEF71FB8D5A400EBBAB5 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DEF61FB8D5A400EBBAB5 /* Networking.swift */; };
 		0488DEF91FB8D76400EBBAB5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DEF81FB8D76400EBBAB5 /* Extensions.swift */; };
 		0488DEFB1FB8EFB300EBBAB5 /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DEFA1FB8EFB300EBBAB5 /* APIResource.swift */; };
+		0488DEFD1FB8F0D600EBBAB5 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DEFC1FB8F0D600EBBAB5 /* Pokemon.swift */; };
+		0488DEFF1FB8F17D00EBBAB5 /* Abilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DEFE1FB8F17D00EBBAB5 /* Abilities.swift */; };
+		0488DF011FB8F20E00EBBAB5 /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0488DF001FB8F20E00EBBAB5 /* Types.swift */; };
 		94873FD8723E16E534C953CC /* Pods_Pokedex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E1D7A024B8A698957664430 /* Pods_Pokedex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042C68A21FB9D3960031C93F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		046F085D1FB8FA4300FD64E9 /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		046F085E1FB8FA4300FD64E9 /* PokeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokeCell.xib; sourceTree = "<group>"; };
+		046F08631FB8FD9A00FD64E9 /* PokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeViewController.swift; sourceTree = "<group>"; };
 		0488DED11FB8CBC500EBBAB5 /* Pokedex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0488DED41FB8CBC500EBBAB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0488DED91FB8CBC500EBBAB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +50,9 @@
 		0488DEF61FB8D5A400EBBAB5 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		0488DEF81FB8D76400EBBAB5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0488DEFA1FB8EFB300EBBAB5 /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		0488DEFC1FB8F0D600EBBAB5 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		0488DEFE1FB8F17D00EBBAB5 /* Abilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abilities.swift; sourceTree = "<group>"; };
+		0488DF001FB8F20E00EBBAB5 /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		4E1D7A024B8A698957664430 /* Pods_Pokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		693C9DAEC61F43BCB9DC83B9 /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 		E580BD28E5E445986334F81A /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				0488DEEC1FB8D32400EBBAB5 /* LoginViewController.swift */,
+				046F08631FB8FD9A00FD64E9 /* PokeViewController.swift */,
+				042C68A21FB9D3960031C93F /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,6 +118,8 @@
 			children = (
 				0488DED81FB8CBC500EBBAB5 /* Main.storyboard */,
 				0488DEDD1FB8CBC500EBBAB5 /* LaunchScreen.storyboard */,
+				046F085D1FB8FA4300FD64E9 /* PokeCell.swift */,
+				046F085E1FB8FA4300FD64E9 /* PokeCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,8 +127,11 @@
 		0488DEE81FB8CFBF00EBBAB5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0488DEEE1FB8D33600EBBAB5 /* UserAccounts.swift */,
 				0488DEFA1FB8EFB300EBBAB5 /* APIResource.swift */,
+				0488DEFC1FB8F0D600EBBAB5 /* Pokemon.swift */,
+				0488DEFE1FB8F17D00EBBAB5 /* Abilities.swift */,
+				0488DF001FB8F20E00EBBAB5 /* Types.swift */,
+				0488DEEE1FB8D33600EBBAB5 /* UserAccounts.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -119,10 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				0488DEF61FB8D5A400EBBAB5 /* Networking.swift */,
+				0488DEF81FB8D76400EBBAB5 /* Extensions.swift */,
+				0488DEF41FB8D59400EBBAB5 /* GlobalCache.swift */,
 				0488DEF01FB8D46300EBBAB5 /* Constants.swift */,
 				0488DEF21FB8D58200EBBAB5 /* Alerts.swift */,
-				0488DEF41FB8D59400EBBAB5 /* GlobalCache.swift */,
-				0488DEF81FB8D76400EBBAB5 /* Extensions.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -209,6 +230,7 @@
 				0488DEDF1FB8CBC500EBBAB5 /* LaunchScreen.storyboard in Resources */,
 				0488DEEB1FB8D19700EBBAB5 /* GoogleService-Info.plist in Resources */,
 				0488DEDC1FB8CBC500EBBAB5 /* Assets.xcassets in Resources */,
+				046F08601FB8FA4300FD64E9 /* PokeCell.xib in Resources */,
 				0488DEDA1FB8CBC500EBBAB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,10 +305,16 @@
 				0488DEED1FB8D32400EBBAB5 /* LoginViewController.swift in Sources */,
 				0488DEF31FB8D58200EBBAB5 /* Alerts.swift in Sources */,
 				0488DEF71FB8D5A400EBBAB5 /* Networking.swift in Sources */,
+				0488DF011FB8F20E00EBBAB5 /* Types.swift in Sources */,
+				046F085F1FB8FA4300FD64E9 /* PokeCell.swift in Sources */,
+				046F08641FB8FD9A00FD64E9 /* PokeViewController.swift in Sources */,
 				0488DEF91FB8D76400EBBAB5 /* Extensions.swift in Sources */,
 				0488DEFB1FB8EFB300EBBAB5 /* APIResource.swift in Sources */,
+				0488DEFD1FB8F0D600EBBAB5 /* Pokemon.swift in Sources */,
 				0488DEEF1FB8D33600EBBAB5 /* UserAccounts.swift in Sources */,
 				0488DEF51FB8D59400EBBAB5 /* GlobalCache.swift in Sources */,
+				0488DEFF1FB8F17D00EBBAB5 /* Abilities.swift in Sources */,
+				042C68A31FB9D3960031C93F /* DetailViewController.swift in Sources */,
 				0488DED51FB8CBC500EBBAB5 /* AppDelegate.swift in Sources */,
 				0488DEF11FB8D46300EBBAB5 /* Constants.swift in Sources */,
 			);

@@ -9,6 +9,12 @@
 
 import UIKit
 
+enum ResourceType: String {
+    case pokemon = "pokemon"
+    case types = "type"
+    case abilities = "ability"
+    case evolution = "evolution-chain"
+}
 protocol resource {
     var url:String {get}
 }
@@ -23,6 +29,28 @@ struct namedResource: resource {
             else {return nil}
         self.name = name
         self.url = url
+    }
+}
+
+struct APINamedResourceList {
+    var count:Int?
+    var next:String?
+    var previous:Bool?
+    var results:[namedResource]?
+    
+    init?(data:Data){
+        do{
+            let json = try JSONSerialization.jsonObject(with: data) as? [String:Any]
+            if let count = json?["count"] as? Int {self.count = count}
+            if let previous = json?["previous"] as? Bool {self.previous = previous}
+            if let next = json?["next"] as? String {self.next = next}
+            if let results = json?["results"] as? [[String:Any]] {
+                self.results = results.flatMap{namedResource($0)}
+            }
+        }
+        catch let error {
+            print("APINamedResourceList init Failed! \(error.localizedDescription)")
+        }
     }
 }
 
@@ -63,5 +91,11 @@ struct GenerationGameIndex {
         self.game_index = game_index
         self.generation = namedResource(generation)
     }
+}
+
+enum pokeView {
+    case all
+    case typed
+    
 }
 
