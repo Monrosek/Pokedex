@@ -42,6 +42,8 @@ class func getImage(from url:String,completionHandler:@escaping(UIImage?,Error?)
     task.resume()
   }
     
+//class func getPokemonImage(from ur)
+    
 class func getPokemon(from url:String, completionHandler:@escaping(Pokemon?,Error?)->()){
         guard let url = URL(string:url) else {
             completionHandler(nil, NetworkError.BadURL)
@@ -67,7 +69,7 @@ class func getPokemon(from url:String, completionHandler:@escaping(Pokemon?,Erro
     }
     
 class func getResourceList(ofType type:ResourceType, completionHandler:@escaping(APINamedResourceList?, Error?)->()){
-    guard let url = URL(string: String(k.rootAPI+"\(type.rawValue)/?limit=151")) else {
+    guard let url = URL(string: String(API.root+"\(type.rawValue)/"+API.limit)) else {
         completionHandler(nil, NetworkError.BadURL)
         return
     }
@@ -89,6 +91,23 @@ class func getResourceList(ofType type:ResourceType, completionHandler:@escaping
     }
     task.resume()
  }
-
+ class func getCachedPokemon(url: String) -> Pokemon? {
+        let cache = GlobalCache.shared.pokeCache
+        if let obj = cache.object(forKey: url as NSString) {
+            if let poke = obj as? Pokemon {
+                return poke
+            }
+        }
+        
+            getPokemon(from: url) { (poke,error) in
+            guard error == nil else {return}
+            guard let poke = poke else {return}
+            cache.setObject(poke as AnyObject, forKey: url as NSString)
+            DispatchQueue.main.sync {
+                return poke
+            }
+        }
+        return nil
+    }
     
 }

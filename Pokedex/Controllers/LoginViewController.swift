@@ -59,11 +59,11 @@ class LoginViewController: UIViewController {
 
     
     // MARK: - Navigation
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
-        
-    }
+            guard let VC = segue.destination as? PokeViewController else {return}
+              VC.resourceType = .pokemon
+        }
+    
 }
 
 typealias TextFieldDelegate = LoginViewController
@@ -82,6 +82,9 @@ extension TextFieldDelegate: UITextFieldDelegate {
                 return false
             }
             logInToFirebase()
+            self.performSegue(withIdentifier: "login", sender: self)
+
+            
         } else {
             
             guard textField.Evaluate(.Email) else {

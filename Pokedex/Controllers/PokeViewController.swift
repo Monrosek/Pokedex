@@ -48,7 +48,6 @@ class PokeViewController: UIViewController {
         }
     }
  
-
 }
 
 typealias PokeCollection = PokeViewController
@@ -69,9 +68,9 @@ extension PokeCollection: UICollectionViewDelegate, UICollectionViewDataSource {
         case .pokemon:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokeCell", for: indexPath) as? PokeCell {
                 cell.sprite.image = UIImage(named: "temp")
-                cell.sprite.imageFrom(url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(indexPath.row+1).png")
+                cell.sprite.imageFrom(url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(indexPath.row+API.offset+1).png")
                // cell.pokeFrom(url: "https://pokeapi.co/api/v2/pokemon/\(indexPath.row+1)/")
-                cell.pokeFrom(url: resources[indexPath.row].url)
+              //  cell.pokeFrom(url: resources[indexPath.row].url)
                 cell.Label.text = resources[indexPath.row].name
                 return cell
             }
@@ -88,8 +87,6 @@ extension PokeCollection: UICollectionViewDelegate, UICollectionViewDataSource {
         
         // Configure the cell
 
-        // cell.sprite.imageFrom(url: <#T##String#>)
-     //   cell.Label.text = resources?[indexPath.row].name ?? ""
         return UICollectionViewCell()
     }
     

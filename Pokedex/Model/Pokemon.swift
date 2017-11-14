@@ -110,6 +110,17 @@ struct PokemonSprite {
     }
 }
 
+enum statType: String, Codable {
+    case HP = "Hp"
+    case ATK = "attack"
+    case DEF = "defense"
+    case SATK = "special-attack"
+    case SDEF = "special-defense"
+    case SPD = "speed"
+    case ACC = "accuracy"
+    case EVA = "evasion"
+    case NA = "N/A"
+}
 struct PokemonStat {
     var stat:namedResource?
     var effort:Int?
@@ -123,6 +134,28 @@ struct PokemonStat {
         self.stat = namedResource(stat)
         self.effort = effort
         self.base_stat = base_stat
+    }
+    
+    func getStat()->String? {
+        return stat?.name
+    }
+    
+    func getStatType()->statType {
+        if let s = self.getStat() {
+        switch s {
+        case "hp": return .HP
+        case "attack": return .ATK
+        case "defense": return .DEF
+        case "special-attack": return .SATK
+        case "special-defense": return .SDEF
+        case "speed": return .SPD
+        case "accuracy": return .ACC
+        case "evasion": return .EVA
+        default:
+            fatalError("No Stat identifier matches")
+         }
+       }
+        return .NA
     }
 }
 

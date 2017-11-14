@@ -14,7 +14,15 @@ class k {
     //Root img respository
     static let rootImgURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
     static let rootAPI = "https://pokeapi.co/api/v2/"
+    static let APILimit = "?limit=5&offset=450"
     //Upper limit of PokeDex
     static let MaxPokemon = 151
 }
 
+class API {
+    static let root = "https://pokeapi.co/api/v2/"
+    static let offset = 0
+    static let MaxPokemon = 151
+    static let  limit = "?limit=\(MaxPokemon)&offset=\(offset)"
+    static let img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"
+}
